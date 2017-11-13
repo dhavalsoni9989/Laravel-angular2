@@ -1,0 +1,44 @@
+<div *ngIf="!isEditProduct">
+    <h1>Add Product</h1>
+</div>
+<div *ngIf="isEditProduct">
+    <h1>Edit Product</h1>
+</div>
+
+<table id="example" class="display" cellspacing="0" width="100%">
+    <tr>
+        <td width="8%">Name</td>
+        <td width="2%">:</td>
+        <td><input type="text" value="{{masterName}}"></td>
+    </tr>
+    <tr>
+        <td>Position</td>
+        <td>:</td>
+        <td><input type="text" value="{{position}}"></td>
+    </tr>
+    <tr>
+        <td>Office</td>
+        <td>:</td>
+        <td><input type="number" value="{{office}}"></td>
+    </tr>
+    <tr>
+        <td>Age</td>
+        <td>:</td>
+        <td><input type="number" value="{{age}}"></td>
+    </tr>
+    <tr>
+        <td>Start Date</td>
+        <td>:</td>
+        <td><input type="text" value="{{startdate}}"></td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>:</td>
+        <td><input type="text" value="{{salary}}"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button type="submit" value="1">Submit</button></td>
+        <td><a href="/Product"><button type="button" value="0">Cancel</button></a></td>
+    </tr>
+</table>
+    

@@ -1,0 +1,39 @@
+<div *ngIf="!isEditProduct">
+    <h1>Add Product</h1>
+</div>
+<div *ngIf="isEditProduct">
+    <h1>Edit Product</h1>
+</div>
+<form name="userform" #addForm="ngForm"  (ngSubmit)="submitData(addForm)"  method="post" enctype="multipart/form-data" >
+<table id="example" class="display" cellspacing="0" width="100%">
+    <tr>
+        <td width="8%">Name</td>
+        <td width="2%">:</td>
+        <td><input type="text" name="contactFirstName" value="{{masterName}}" [(ngModel)]="user.contactFirstName" #contactFirstName="ngModel"></td>
+    </tr>
+    <tr>
+        <td>Position</td>
+        <td>:</td>
+        <td><input type="text" name="contactLastName" value="{{position}}" [(ngModel)]="user.contactLastName" #contactLastName="ngModel"></td>
+    </tr>
+    <tr>
+        <td>phone	</td>
+        <td>:</td>
+        <td><input type="number" name="phone" value="{{office}}" [(ngModel)]="user.phone" #phone="ngModel"></td>
+    </tr>
+    <tr>
+        <td>City</td>
+        <td>:</td>
+        <td><input type="text" name="city" value="{{startdate}}" [(ngModel)]="user.city" #city="ngModel"></td>
+    </tr>
+    <tr>
+        <td>State</td>
+        <td>:</td>
+        <td><input type="text" name="state" value="{{salary}}" [(ngModel)]="user.state" #state="ngModel"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button type="submit" value="1">Submit</button></td>
+        <td><a href="/"><button type="button" value="0">Cancel</button></a></td>
+    </tr>
+</table>
+ </form>   

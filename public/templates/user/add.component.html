@@ -1,0 +1,36 @@
+<div *ngIf="!isEditUser">
+    <h1>Add User</h1>
+</div>
+<div *ngIf="isEditUser">
+    <h1>Edit User</h1>
+</div>
+<div class="col-lg-6">
+<form name="userform" #addForm="ngForm"  (ngSubmit)="submitData(addForm)"  method="post" enctype="multipart/form-data" >
+<table id="example" class="table table-striped" cellspacing="0" >
+    <tr>
+        <td width="20%">First Name</td>
+        <td width="2%">:</td>
+        <td><input type="text" class="form-control" name="firstName"  [(ngModel)]="user.firstName" #firstName="ngModel"></td>
+    </tr>
+    <tr>
+        <td>Last Name</td>
+        <td>:</td>
+        <td><input type="text" class="form-control" name="lastName"  [(ngModel)]="user.lastName" #lastName="ngModel"></td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>:</td>
+        <td><input type="text" class="form-control" name="email" [(ngModel)]="user.email" #email="ngModel"></td>
+    </tr>
+    <tr>
+        <td>Contact No</td>
+        <td>:</td>
+        <td><input type="text" class="form-control" name="contactNo" [(ngModel)]="user.contactNo" #contactNo="ngModel"></td>
+    </tr>
+    <tr>
+        <td colspan="2"><button type="submit" value="1">Submit</button></td>
+        <td><a [routerLink]="['/users']" ><button type="button" value="0">Cancel</button></a></td>
+    </tr>
+</table>
+ </form>   
+ </div>

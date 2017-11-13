@@ -1,0 +1,46 @@
+<h1>List Users</h1>
+
+<a [routerLink]="['add']" >Add User</a><br/><br/>
+
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">    
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact No.</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </tfoot>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <modal #firstModal>
+      <modal-header>
+        <h3>{{ _popupTitle }}</h3>
+      </modal-header>
+      <modal-content>
+          {{ _popupBody }}
+      </modal-content>
+      <modal-footer>
+        <span *ngIf="_popupBtn == 2">
+          <button class="btn btn-primary" (click)="userDelete()">Confirm</button>
+        </span>
+        <span *ngIf="_popupBtn == 3">
+          <button class="btn btn-primary" (click)="userStatusUpdate()">Confirm</button>
+        </span>
+        <button class="btn btn-primary" (click)="firstModal.close()">Cancel</button>
+      </modal-footer>
+    </modal>
